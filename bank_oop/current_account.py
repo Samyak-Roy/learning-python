@@ -1,12 +1,12 @@
-
 from datetime import datetime
-import BaseAccount
+from base_account import BaseAccount
 
 class CurrentAccount(BaseAccount):
     def __init__(self, account_number, customer):
         super().__init__(account_number, customer)
         self.account_type = 'Current Account'
         self.overdraft_limit = 10001
+        self.overdraft_interest = 0.21
         
     def withdraw(self,amount):
       # Check if the amount is positive
@@ -25,4 +25,14 @@ class CurrentAccount(BaseAccount):
     def display_account_details(self):
       print(f'Account Number: {self.account_number}')
       print(f'Account Type: {self.account_type}')
-      print(f'Balance: {self.balance}')        
+      print(f'Balance: {self.balance}') 
+
+    def get_overdraft_limit(self):
+        return self.overdraft_limit
+
+    def get_overdraft_interest(self):
+        print('Overdraft interest rate is 21%')
+        return self.overdraft_interest
+    
+
+              

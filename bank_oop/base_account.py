@@ -41,7 +41,3 @@ class BaseAccount:
     def transaction_log(self):
       for tx in self.transactions:
         print(tx)
-    
-
-    
-        
