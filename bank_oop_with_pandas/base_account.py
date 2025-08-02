@@ -8,8 +8,6 @@ class BaseAccount:
         self.customer = customer
         self.transactions = []
     
-    
-
     def withdraw(self,amount):
       if amount > 0:
         if self.balance > 0 and self.balance >= amount:
@@ -43,3 +41,9 @@ class BaseAccount:
     def transaction_log(self):
       for tx in self.transactions:
         print(tx)
+
+    def set_transaction_log(self,transaction_log):
+      self.transactions.append(transaction_log)
+
+    def __str__(self):
+        return f"Account Number: {self.account_number}, Customer: {self.customer.name}, Balance: {self.balance}"
