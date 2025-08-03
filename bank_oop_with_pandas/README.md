@@ -1,4 +1,4 @@
-# banking application with pandas
+# Banking Application with Pandas
 
 - Step 1: Read the xlsx files using pandas library.
 - Note: First worksheet is about account details and the second one is the transaction log
